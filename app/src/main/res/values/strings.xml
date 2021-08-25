@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Voting System</string>
+    <string name="ref_txt">Refresh</string>
+    <string name="home">Home</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
+    <string name="menu">Menu</string>
+    <string name="title_activity_about">AboutActivity</string>
+</resources>
