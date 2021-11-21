@@ -4,8 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.view.*;
 import android.webkit.*;
 import android.content.*;
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
     private Toolbar toolbar;
     private ObservableWebView wb;
     private ProgressBar pb;
-    private final String url = "https://voting-system-jayke.herokuapp.com";
+    private final String url = "https://wmsuaesu-voting-system.herokuapp.com";
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -129,10 +129,6 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
             case R.id.home:
                 wb.loadUrl(url);
                 return true;
-            case R.id.about:
-                Intent about = new Intent(MainActivity.this, about.class);
-                startActivity(about);
-                finish();
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -297,6 +293,14 @@ public class MainActivity extends AppCompatActivity implements ObservableScrollV
             if(!ab.isShowing()){
                 ab.show();
             }
+        }
+    }
+    @Override
+    public void onBackPressed () {
+        if(wb.canGoBack()){
+            wb.goBack();
+        } else {
+            finish();
         }
     }
 }

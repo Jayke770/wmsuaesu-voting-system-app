@@ -18,16 +18,6 @@
         android:theme="@style/Theme.VotingSystem"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".about"
-            android:exported="true" />
-        <activity
-            android:name=".AboutActivity"
-            android:exported="true"
-            android:label="@string/title_activity_about"
-            android:resizeableActivity="true"
-            android:theme="@style/Theme.VotingSystem.NoActionBar"
-            tools:targetApi="24" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
